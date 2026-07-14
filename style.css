@@ -1,0 +1,630 @@
+/* ===================================
+RESET
+=================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* ===================================
+STARS
+=================================== */
+
+#stars-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+pointer-events:none;
+}
+
+/* ===================================
+GLOBAL
+=================================== */
+
+.section{
+padding:120px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-badge{
+display:inline-block;
+padding:10px 20px;
+border-radius:50px;
+background:rgba(255,255,255,.08);
+color:#78e8ff;
+margin-bottom:15px;
+}
+
+.section-title h2{
+font-size:52px;
+margin-bottom:15px;
+}
+
+.section-title p{
+opacity:.8;
+}
+
+/* ===================================
+NAVBAR
+=================================== */
+
+.navbar{
+position:fixed;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+width:95%;
+padding:15px 25px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(18px);
+border-radius:20px;
+z-index:9999;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-area img{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+box-shadow: 0 0 8px rgb(255, 255, 255);
+object-fit:contain;
+}
+
+.logo-area h2{
+font-size:16px;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#78e8ff;
+}
+
+.nav-icons{
+display:flex;
+gap:10px;
+}
+
+.nav-icons a{
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+color:white;
+text-decoration:none;
+}
+
+/* ===================================
+HERO
+=================================== */
+
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+padding:120px 8%;
+}
+
+.hero-content{
+text-align:center;
+}
+
+.hero-badge{
+display:inline-block;
+padding:10px 20px;
+border-radius:50px;
+background:rgba(255,255,255,.08);
+color:#78e8ff;
+margin-bottom:20px;
+}
+
+.hero-content h1{
+font-size:82px;
+font-weight:800;
+line-height:1;
+margin-bottom:15px;
+}
+
+.hero-content h3{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+max-width:650px;
+margin:auto;
+line-height:2;
+opacity:.85;
+margin-bottom:30px;
+}
+
+.hero-image{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/*
+IMPORTANT
+
+کوئی Crop نہیں
+*/
+
+.hero-image img{
+max-width:100%;
+max-height:600px;
+width:auto;
+height:auto;
+display:block;
+object-fit:contain;
+border-radius:20px;
+box-shadow:0 0 8px rgb(255, 255, 255);
+}
+
+/* ===================================
+BUTTONS
+=================================== */
+
+.primary-btn,
+.secondary-btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:15px;
+text-decoration:none;
+margin:5px;
+transition:.3s;
+transition all .3s ease-in-out;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 25px rgba(120,232,255,.15);
+}
+
+.primary-btn{
+background:#78e8ff;
+color:black;
+font-weight:600;
+}
+
+.secondary-btn{
+background:rgba(255,255,255,.08);
+color:white;
+}/* ===================================
+ABOUT
+=================================== */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.about-image{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.about-image img{
+
+max-width:100%;
+height:auto;
+
+display:block;
+
+object-fit:contain;
+border-radius:20px;
+box-shadow:0 0 8px rgb(255, 255, 255);
+
+/* کوئی crop نہیں */
+}
+
+.about-content h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.about-content p{
+line-height:2;
+opacity:.85;
+margin-bottom:15px;
+}
+
+/* ===================================
+SERVICES
+=================================== */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.service-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:22px;
+
+padding: 8%;
+
+text-align:center;
+
+transition:.35s;
+}
+
+.service-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 0 25px rgba(120,232,255,.15);
+}
+
+.service-icon{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+color:#78e8ff;
+}
+
+.service-card h3{
+margin-bottom:10px;
+}
+
+.service-card p{
+opacity:.8;
+margin-bottom:15px;
+}
+
+.order-btn{
+
+display:inline-block;
+
+padding:10px 18px;
+
+border-radius:12px;
+
+background:#78e8ff;
+
+color:black;
+
+font-weight:600;
+
+text-decoration:none;
+}
+
+/* ===================================
+PROJECTS
+=================================== */
+
+/*
+Masonry Layout
+
+کوئی image crop نہیں ہوگی
+*/
+
+.projects-masonry{
+
+column-count:3;
+
+column-gap:18px;
+}
+
+.projects-masonry img{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+/* Border بہت کم */
+
+border:1px solid rgba(255,255,255,.04);
+
+cursor:pointer;
+
+transition:.35s;
+}
+
+.projects-masonry img:hover{
+
+transform:scale(1.02);
+
+box-shadow:
+0 0 25px rgba(120,232,255,.15);
+}
+
+/* ===================================
+LIGHTBOX
+=================================== */
+
+.lightbox{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.96);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+}
+
+.lightbox.active{
+display:flex;
+}
+
+.lightbox-image{
+
+max-width:95%;
+max-height:95%;
+
+object-fit:contain;
+
+/* crop نہیں */
+}
+
+.close-lightbox,
+.prev-btn,
+.next-btn{
+
+position:absolute;
+
+border:none;
+
+cursor:pointer;
+
+background:
+rgba(255,255,255,.1);
+
+color:white;
+
+border-radius:50%;
+}
+
+.close-lightbox{
+
+top:20px;
+right:25px;
+
+width:50px;
+height:50px;
+
+font-size:28px;
+}
+
+.prev-btn{
+
+left:20px;
+
+width:55px;
+height:55px;
+}
+
+.next-btn{
+
+right:20px;
+
+width:55px;
+height:55px;
+}
+
+/* ===================================
+CONTACT
+=================================== */
+
+.contact-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+}
+
+.contact-btn{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+padding:16px 24px;
+
+background:
+rgba(255,255,255,.08);
+
+border-radius:15px;
+
+text-decoration:none;
+
+color:white;
+
+transition all .3s ease-in-out;
+}
+
+.contact-btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 25px rgb(255, 255, 255);
+}
+
+/* ===================================
+FOOTER
+=================================== */
+
+footer{
+
+padding:60px 20px;
+
+text-align:center;
+
+border-top:
+1px solid rgba(255,255,255,.08);
+}
+
+/* ===================================
+TABLET
+=================================== */
+
+@media(max-width:992px){
+
+.hero,
+.about{
+
+grid-template-columns:1fr;
+}
+
+.services-grid{
+
+grid-template-columns:
+repeat(2,1fr);
+}
+
+.projects-masonry{
+
+column-count:2;
+}
+
+.hero-content h1{
+
+font-size:60px;
+}
+
+}
+
+/* ===================================
+MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.hero-content h1{
+
+font-size:40px;
+}
+
+.hero-content h3{
+
+font-size:22px;
+}
+
+.services-grid{
+
+grid-template-columns: repeat2(1fr);
+gap:15px;
+justify-items:center;
+width:100%;
+overflow-x:hidden;
+}
+services-card{
+    width:100%;
+    min-width: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/*
+Mobile پر ایک column
+
+تاکہ تصویر مکمل نظر آئے
+*/
+
+.projects-masonry{
+
+column: count 1px;
+}
+
+.contact-buttons{
+
+flex-direction:column;
+
+align-items:center;
+}
+
+.contact-btn{
+
+width:230px;
+
+justify-content:center;
+}
+
+.about-content h2{
+
+font-size:36px;
+}
+
+.section-title h2{
+
+font-size:34px;
+}
+
+}
